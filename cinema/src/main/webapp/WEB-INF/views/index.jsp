@@ -10,6 +10,16 @@
 
 <%@include file="static_parts/header.jsp"%>
 
-
-
+    <main class="posters-block">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
 <%@include file="static_parts/footer.jsp"%>
