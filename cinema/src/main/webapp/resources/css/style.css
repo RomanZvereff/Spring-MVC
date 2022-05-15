@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar .container-fluid {
+    width: 90%;
+}
+
+.navbar-brand .start,
+.navbar-brand .end {
+    font-size: 1.5rem;
+}
+
+.navbar-brand .end {
+    background-color: #3089d7;
+    border-radius: 5px;
+    padding: 0 5px;
+    color: #eeeeee;
+}
+
+.navbar-nav a.nav-link,
+.navbar-nav a.dropdown-item {
+    font-size: 1.04rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.navbar-nav a.nav-link {
+    margin: 0 1rem;
+}
+
+.navbar-nav a.nav-link.sign-in {
+    border: #8edb9269 2px solid;
+    border-radius: 5px;
+}
+
+.navbar-nav a.nav-link.sign-in:hover {
+    background-color: #8edb9269;
+    color: #282828;
+}
+
+.navbar-nav a.nav-link.sign-up {
+    border: #3e89d7b5 2px solid;
+    border-radius: 5px;
+}
+
+.navbar-nav a.nav-link.sign-up:hover {
+    background-color: #3e89d7b5;
+    color: #f6f6f6;
+}
+
+
+
+footer {
+    height: 250px;
+    background-color: #212c3b;
+}
+
+@media screen and (max-width: 1552px)  {
+    .navbar .container-fluid {
+        width: 100%;
+    }
+}
