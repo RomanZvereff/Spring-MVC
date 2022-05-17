@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: roman
@@ -6,7 +5,8 @@
   Time: 20:35
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
 
 <%@include file="static_parts/header.jsp"%>
 
@@ -14,9 +14,11 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-3">
-                    <img src="">
-                </div>
+                <c:forEach var="filmPoster" items="${film}">
+                    <div class="col-3">
+                        <img src="${filmPoster.filmPoster}" class="film-poster">
+                    </div>
+                </c:forEach>
             </div>
         </div>
         

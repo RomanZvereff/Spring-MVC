@@ -13,13 +13,13 @@ import java.util.List;
 public class FilmDAOImpl implements AbstractDAO {
 
     private static final String GET_ALL_FILMS = "select * from now_in_cinema";
-    @Autowired
+
     private JdbcTemplate jdbcTemplate;
-//
-//    @Autowired
-//    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-//        this.jdbcTemplate = jdbcTemplate;
-//    }
+
+    @Autowired
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     @Override
     public List<FilmEntity> getAll() {

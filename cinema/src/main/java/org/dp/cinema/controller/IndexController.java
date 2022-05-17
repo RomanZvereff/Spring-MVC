@@ -23,6 +23,7 @@ public class IndexController {
     public String getHelloView(Model model) {
 
         List<FilmEntity> filmEntityList = filmDAOImpl.getAll();
+
         filmEntityList.forEach(System.out::println);
 
         model.addAttribute("film", filmEntityList);

@@ -5,7 +5,6 @@
   Time: 20:22
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,6 +17,14 @@
 
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/vendor/bootstrap/css/bootstrap.min.css"/>">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/style.css"/>">
+
+    <style>
+        .film-poster {
+            width: 350px;
+            height: auto;
+        }
+    </style>
+
 </head>
 <body>
 
