@@ -12,11 +12,15 @@
 
     <main class="posters-block">
         
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <c:forEach var="filmPoster" items="${film}">
                     <div class="col-3">
-                        <img src="${filmPoster.filmPoster}" class="film-poster">
+                        <div class="poster">
+                            <div class="poster-item">
+                                <img src="${filmPoster.filmPoster}" class="film-poster">
+                            </div>
+                        </div>
                     </div>
                 </c:forEach>
             </div>

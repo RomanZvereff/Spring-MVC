@@ -52,6 +52,11 @@ body {
     color: #f6f6f6;
 }
 
+.poster-item img {
+    width: 100%;
+    height: auto;
+}
+
 
 
 footer {
