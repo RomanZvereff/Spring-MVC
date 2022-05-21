@@ -78,4 +78,17 @@ public class FilmEntity extends CinemaEntity {
         this.filmGenres = filmGenres;
     }
 
+    @Override
+    public String toString() {
+        return "FilmEntity{" +
+                "startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", filmName='" + filmName + '\'' +
+                ", filmPoster='" + filmPoster + '\'' +
+                ", filmTrailer='" + filmTrailer + '\'' +
+                ", filmDesc='" + filmDesc + '\'' +
+                ", filmActors='" + filmActors + '\'' +
+                ", filmGenres='" + filmGenres + '\'' +
+                '}';
+    }
 }

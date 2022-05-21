@@ -14,11 +14,23 @@
         
         <div class="container-fluid">
             <div class="row">
-                <c:forEach var="filmPoster" items="${film}">
-                    <div class="col-3">
+                <c:forEach var="film" items="${films}">
+                    <div class="col-3 poster-col">
                         <div class="poster">
                             <div class="poster-item">
-                                <img src="${filmPoster.filmPoster}" class="film-poster">
+                                <img src="${film.filmPoster}" class="film-poster">
+                            </div>
+                        </div>
+                        <div class="poster-text">
+                            <div class="poster-title">
+                                <p>NOW PLAYING</p>
+                            </div>
+                            <div class="film-name">
+                                <p>${film.filmName}</p>
+                            </div>
+                            <div class="get-ticket-btn">
+                                <a class="buy-ticket-btn" href="/buy-ticket">Get Ticket</a>
+                                <a class="poster-trailer" href="${film.filmTrailer}" target="_blank">Watch trailer</a>
                             </div>
                         </div>
                     </div>
@@ -27,5 +39,10 @@
         </div>
         
     </main>
+
+    <section id="movies-block">
+
+    </section>
+
     
 <%@include file="static_parts/footer.jsp"%>

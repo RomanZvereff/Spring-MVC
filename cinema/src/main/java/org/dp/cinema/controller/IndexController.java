@@ -26,7 +26,7 @@ public class IndexController {
 
         filmEntityList.forEach(System.out::println);
 
-        model.addAttribute("film", filmEntityList);
+        model.addAttribute("films", filmEntityList);
 
         return "index";
     }

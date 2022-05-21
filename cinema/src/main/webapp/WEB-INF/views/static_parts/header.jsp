@@ -21,7 +21,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-xxl navbar-light bg-light">
+        <nav class="navbar navbar-expand-xxl navbar-light bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <span class="start">Cinema</span>
@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Movies</a>
@@ -59,14 +59,17 @@
                             <a class="nav-link" href="#">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link sign-in" href="#">Sign In</a>
+                            <button class="nav-link sign-in">
+                                <span>Sign In</span>
+                            </button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link sign-up" href="#">Sign Up</a>
+                            <button class="nav-link sign-up" data-toggle="modal" data-target="#registrationForm">
+                                <span>Sign Up</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
