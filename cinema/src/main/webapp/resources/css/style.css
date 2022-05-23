@@ -9,12 +9,12 @@ body {
     width: 90%;
 }
 
-.navbar-brand .start,
-.navbar-brand .end {
+.brand-start,
+.brand-end {
     font-size: 1.5rem;
 }
 
-.navbar-brand .end {
+.brand-end {
     background-color: #3089d7;
     border-radius: 5px;
     padding: 0 5px;
@@ -47,6 +47,14 @@ body {
 
 .sign-up span {
     border-bottom: #3e89d7b5 2px solid;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+button:focus-visible {
+    outline: none;
 }
 
                                     /* MAIN */
