@@ -18,7 +18,7 @@
                     <div class="col-3 poster-col">
                         <div class="poster">
                             <div class="poster-item">
-                                <img src="${film.filmPoster}" class="film-poster">
+                                <img src="${film.filmPoster}" class="film-poster" alt="${film.filmName}">
                             </div>
                         </div>
                         <div class="poster-text">
