@@ -18,6 +18,7 @@ create table if not exists users_info (
 );
 
 create table if not exists now_in_cinema (
+	film_id int auto_increment primary key,
 	start_date date not null,
     end_date date not null,
     film_name varchar(50) not null,
