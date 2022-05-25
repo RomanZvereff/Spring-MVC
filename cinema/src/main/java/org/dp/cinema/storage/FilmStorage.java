@@ -1,6 +1,6 @@
 package org.dp.cinema.storage;
 
-import org.dp.cinema.entity.FilmEntity;
+import org.dp.cinema.model.FilmEntity;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.dp.cinema.entity;
+package org.dp.cinema.model;
 
 public abstract class CinemaEntity {
 }

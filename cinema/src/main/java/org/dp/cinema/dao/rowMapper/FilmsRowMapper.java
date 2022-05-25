@@ -1,6 +1,6 @@
 package org.dp.cinema.dao.rowMapper;
 
-import org.dp.cinema.entity.FilmEntity;
+import org.dp.cinema.model.FilmEntity;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

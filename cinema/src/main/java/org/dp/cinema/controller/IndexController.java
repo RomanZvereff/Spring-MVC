@@ -1,7 +1,7 @@
 package org.dp.cinema.controller;
 
 import org.dp.cinema.dao.impl.FilmDAOImpl;
-import org.dp.cinema.entity.FilmEntity;
+import org.dp.cinema.model.FilmEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +24,7 @@ public class IndexController {
 
         List<FilmEntity> filmEntityList = filmDAOImpl.getAll();
 
-        filmEntityList.forEach(System.out::println);
+//        filmEntityList.forEach(System.out::println);
 
         model.addAttribute("films", filmEntityList);
 

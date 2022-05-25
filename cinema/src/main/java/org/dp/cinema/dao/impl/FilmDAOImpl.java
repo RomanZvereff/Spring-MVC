@@ -2,7 +2,7 @@ package org.dp.cinema.dao.impl;
 
 import org.dp.cinema.dao.AbstractDAO;
 import org.dp.cinema.dao.rowMapper.FilmsRowMapper;
-import org.dp.cinema.entity.FilmEntity;
+import org.dp.cinema.model.FilmEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
