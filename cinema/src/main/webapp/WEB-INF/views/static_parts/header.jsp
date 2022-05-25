@@ -125,7 +125,7 @@
                 </h5>
                 <button type="button" class="btn-close sign-up-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="signUp" method="post">
+            <form action="registration" method="post">
                 <div class="modal-body">
                     <div class="sign-up-form">
                         <div class="mb-3">
