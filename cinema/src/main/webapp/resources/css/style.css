@@ -118,10 +118,46 @@ button:focus-visible {
     color: #ffffff;
 }
 
+                                    /* MOST ANTICIPATED */
+.most-anticipated-film {
+    min-height: 60vh;
+    background-image: url("../images/Killers-of-the-Flower-Moon-Photo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.most-anticipated-sub-title {
+    font-size: 2rem;
+}
+
+.most-anticipated-title {
+    text-align: center;
+    color: #f9f9f9;
+    font-size: 3rem;
+}
+
+.most-anticipated-btn {
+    text-align: center;
+}
+
+.most-anticipated-btn button {
+    background-color: transparent;
+    border: 0;
+    transition: 0.3s;
+}
+
+.most-anticipated-btn button:hover {
+    transform: scale(1.05);
+}
 
 
-
-
+.most-anticipated-film {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

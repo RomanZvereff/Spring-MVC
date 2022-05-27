@@ -40,8 +40,24 @@
         
     </main>
 
-    <section id="movies-block">
-
+    <section id="most-anticipated">
+        <div class="container-fluid most-anticipated-film">
+            <div class="row">
+                <div class="col-12">
+                    <div class="most-anticipated-text">
+                        <div class="most-anticipated-title">
+                            <p class="most-anticipated-sub-title">The Most Anticipated Movie <span>2022</span></p>
+                            <p>Killers of the Flower Moon</p>
+                        </div>
+                        <div class="most-anticipated-btn">
+                            <button type="button">
+                                <img src="static/images/icons/play.png" alt="most anticipated trailer button">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     
