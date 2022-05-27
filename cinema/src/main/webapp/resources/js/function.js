@@ -41,10 +41,11 @@ $('#email-address-sign-up').focusout(function () {
             $('#email-address-sign-up').parent().append('<span class="sign-warning-msg">Email address is invalid</span>');
         }
     } else {
-        isEmailValid = true;
+        // isEmailValid = true;
         if ($('#email-address-sign-up').parent().find('.sign-warning-msg').length) {
             $('#email-address-sign-up').parent().find('.sign-warning-msg').remove();
         }
+        checkEmail($('#email-address-sign-up').val());
     }
     isAllFieldValid();
 });
@@ -95,7 +96,37 @@ $('.sign-up-close').click(function() {
     });
 });
 
+function checkEmail(emailToValid) {
+    $.ajax(
+        {
+            async: true,
+            url: window.location.href + '/emailValidation',
+            type: 'POST',
+            cache: false,
+            data: emailToValid,
+            scriptCharset: 'UTF-8',
+            contentType: 'application/json',
+            complete: function(xhr, textStatus) {
+                responseHandler(xhr.status, textStatus);
+            }
+        }
+    )
+}
 
+function responseHandler(status, textStatus) {
+    console.log(textStatus);
+    if(status === 200) {
+        isEmailValid = true;
+        if ($('#email-address-sign-up').parent().find('.sign-warning-msg').length) {
+            $('#email-address-sign-up').parent().find('.sign-warning-msg').remove();
+        }
+    } else if(status === 500) {
+        isEmailValid = false;
+        if (!$('#email-address-sign-up').parent().find('.sign-warning-msg').length) {
+            $('#email-address-sign-up').parent().append('<span class="sign-warning-msg">The email has already been registered, you can sign in</span>');
+        }
+    }
+}
 
 
 

@@ -3,6 +3,7 @@ package org.dp.cinema.dao.impl;
 import org.dp.cinema.dao.AbstractDAO;
 import org.dp.cinema.model.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -13,8 +14,9 @@ import java.util.List;
 @Repository
 public class UserDAOImpl implements AbstractDAO<UserEntity> {
 
-    private static final String SAVE_USER = "insert into users_info(user_login, user_password) values (?, ?)";
+    private static final String SAVE_USER = "insert into users_info(user_login, user_password, user_role) values (?, ?, ?)";
     private static final String SAVE_CUSTOMER = "insert into customers_info(cust_first_name, cust_last_name) values (?, ?)";
+    private static final String GET_EMAIL = "select user_id from users_info where user_login = ?";
 
     private JdbcTemplate jdbcTemplate;
 
@@ -41,6 +43,7 @@ public class UserDAOImpl implements AbstractDAO<UserEntity> {
                     .prepareStatement(SAVE_USER);
             ps.setString(1, userEntity.getUserEmail());
             ps.setString(2, userEntity.getUserPassword());
+            ps.setString(3, "USER");
             return ps;
         });
 //        }, keyHolder);
@@ -58,6 +61,15 @@ public class UserDAOImpl implements AbstractDAO<UserEntity> {
         });
 //        }, keyHolder);
         return null; //BigInteger.valueOf((long)Objects.requireNonNull(keyHolder.getKey()));
+    }
+
+    public String getUserEmail(String email) {
+        try {
+            return jdbcTemplate.queryForObject(GET_EMAIL, new Object[]{email}, String.class);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
     }
 
 }

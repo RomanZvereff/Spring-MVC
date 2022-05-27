@@ -6,6 +6,7 @@ public class UserEntity extends CinemaEntity {
     private String userLastName;
     private String userEmail;
     private String userPassword;
+    private String userRole;
 
     public String getUserFirstName() {
         return userFirstName;
@@ -37,6 +38,14 @@ public class UserEntity extends CinemaEntity {
 
     public void setUserPassword(String userPassword) {
         this.userPassword = userPassword;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
     @Override
