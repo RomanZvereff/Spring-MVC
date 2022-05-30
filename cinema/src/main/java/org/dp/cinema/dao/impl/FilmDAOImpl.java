@@ -2,17 +2,15 @@ package org.dp.cinema.dao.impl;
 
 import org.dp.cinema.dao.AbstractDAO;
 import org.dp.cinema.dao.rowMapper.FilmsRowMapper;
-import org.dp.cinema.model.CinemaEntity;
-import org.dp.cinema.model.FilmEntity;
+import org.dp.cinema.model.FilmModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @Repository
-public class FilmDAOImpl implements AbstractDAO<FilmEntity> {
+public class FilmDAOImpl implements AbstractDAO<FilmModel> {
 
     private static final String GET_ALL_FILMS = "select * from now_in_cinema";
 
@@ -24,12 +22,23 @@ public class FilmDAOImpl implements AbstractDAO<FilmEntity> {
     }
 
     @Override
-    public List<FilmEntity> getAll() {
+    public FilmModel get(String str) {
+        return null;
+    }
+
+    @Override
+    public List<FilmModel> getAll() {
         return jdbcTemplate.query(GET_ALL_FILMS, new FilmsRowMapper());
     }
 
     @Override
-    public BigInteger save(FilmEntity filmEntity) {
+    public Long save(FilmModel filmModel) {
         return null;
     }
+
+    @Override
+    public void delete(FilmModel obj) {
+
+    }
+
 }

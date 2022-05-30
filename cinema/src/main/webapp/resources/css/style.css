@@ -136,9 +136,11 @@ button:focus-visible {
     text-align: center;
     color: #f9f9f9;
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .most-anticipated-btn {
+    margin: 2rem 0;
     text-align: center;
 }
 

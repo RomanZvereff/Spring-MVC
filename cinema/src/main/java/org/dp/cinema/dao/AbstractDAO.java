@@ -1,15 +1,18 @@
 package org.dp.cinema.dao;
 
-import org.dp.cinema.model.CinemaEntity;
+import org.dp.cinema.model.CinemaModel;
 
-import java.math.BigInteger;
 import java.util.List;
 
-public interface AbstractDAO<T extends CinemaEntity> {
+public interface AbstractDAO<T extends CinemaModel> {
+
+    T get(String str);
 
     List<T> getAll();
 
-    BigInteger save(T obj);
+    Long save(T obj);
+
+    void delete(T obj);
 
 
 

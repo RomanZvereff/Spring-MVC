@@ -3,7 +3,7 @@ package org.dp.cinema.model;
 
 import java.time.LocalDate;
 
-public class FilmEntity extends CinemaEntity {
+public class FilmModel extends CinemaModel {
 
     private LocalDate startDate;
     private LocalDate endDate;
@@ -13,6 +13,9 @@ public class FilmEntity extends CinemaEntity {
     private String filmDesc;
     private String filmActors;
     private String filmGenres;
+
+    public FilmModel() {
+    }
 
     public LocalDate getStartDate() {
         return startDate;

@@ -5,13 +5,15 @@
   Time: 20:22
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Cinema Pro - best in your world</title>
     <meta charset="UTF-8">
     <meta name="author" content="Roman Zvieriev">
-    <meta name="description" content="As the cinema experience continues to improve with technological advancements in Imax, 3D and fully immersive sound">
+    <meta name="description"
+          content="As the cinema experience continues to improve with technological advancements in Imax, 3D and fully immersive sound">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -82,7 +84,8 @@
     </nav>
 </header>
 
-<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModelLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModelLabel" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -90,32 +93,33 @@
                     <span class="brand-start">Cinema</span>
                     <span class="brand-end">Pro</span>
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <%--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
             </div>
-            <div class="modal-body">
-                <div class="sign-in-form">
-                    <form method="post">
+            <form action="login" method="post">
+                <div class="modal-body">
+                    <div class="sign-in-form">
                         <div class="mb-3">
                             <label for="email-address-sign-in" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email-address-sign-in"
-                                   placeholder="name@example.com">
+                                   placeholder="name@example.com" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="password-sign-in" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password-sign-in">
+                            <input type="password" class="form-control" id="password-sign-in" name="pass" required>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Sign in</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                    <button type="button" class="btn btn-secondary sign-ip-close" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUnModelLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUnModelLabel" aria-hidden="true"
+     data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -123,7 +127,7 @@
                     <span class="brand-start">Cinema</span>
                     <span class="brand-end">Pro</span>
                 </h5>
-                <button type="button" class="btn-close sign-up-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <%--                <button type="button" class="btn-close sign-up-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
             </div>
             <form action="registration" method="post">
                 <div class="modal-body">

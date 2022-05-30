@@ -1,27 +1,21 @@
 package org.dp.cinema.model;
 
-public class UserEntity extends CinemaEntity {
+public class UserModel extends CinemaModel {
 
-    private String userFirstName;
-    private String userLastName;
+    private Long userId;
     private String userEmail;
     private String userPassword;
     private String userRole;
 
-    public String getUserFirstName() {
-        return userFirstName;
+    public UserModel() {
     }
 
-    public void setUserFirstName(String userFirstName) {
-        this.userFirstName = userFirstName;
+    public Long getUserId() {
+        return userId;
     }
 
-    public String getUserLastName() {
-        return userLastName;
-    }
-
-    public void setUserLastName(String userLastName) {
-        this.userLastName = userLastName;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getUserEmail() {
@@ -50,12 +44,11 @@ public class UserEntity extends CinemaEntity {
 
     @Override
     public String toString() {
-        return "User{" +
-                "userFirstName='" + userFirstName + '\'' +
-                ", userLastName='" + userLastName + '\'' +
+        return "UserModel{" +
+                "userId=" + userId +
                 ", userEmail='" + userEmail + '\'' +
                 ", userPassword='" + userPassword + '\'' +
+                ", userRole='" + userRole + '\'' +
                 '}';
     }
-
 }

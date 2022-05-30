@@ -1,7 +1,7 @@
 package org.dp.cinema.service;
 
 import org.dp.cinema.dao.impl.UserDAOImpl;
-import org.dp.cinema.model.UserEntity;
+import org.dp.cinema.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,13 +16,11 @@ public class UserRegistrationService {
         this.userDAO = userDAO;
     }
 
-    public void setUserDetails(String firstName, String lastName, String email, String pass) {
-        UserEntity userEntity = new UserEntity();
-        userEntity.setUserFirstName(firstName);
-        userEntity.setUserLastName(lastName);
-        userEntity.setUserEmail(email);
-        userEntity.setUserPassword(encryptUserData(pass));
-        userDAO.save(userEntity);
+    public Long setUserDetails(String email, String pass) {
+        UserModel userModel = new UserModel();
+        userModel.setUserEmail(email);
+        userModel.setUserPassword(encryptUserData(pass));
+        return userDAO.save(userModel);
     }
 
     private String encryptUserData(String str) {
